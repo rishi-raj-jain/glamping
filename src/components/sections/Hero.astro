@@ -1,8 +1,11 @@
 ---
-
+import { Image } from 'astro:assets';
+import heroBadge from "./../../assets/images/hero--badge.svg"
 ---
 <section class="flex w-full h-screen bg-cover py-14 px-10 md:py-12 md:px-16 lg:px-20 lg:py-16 bg-auto bg-center lg:bg-center" style="background-image: url(/src/assets/images/hero--background.jpeg)"></div>
-  <div><img src="/src/assets/images/hero--badge.svg" alt="badge" class="md:w-20 lg:w-24 w-48 fill-current"></div>
+  <div>
+    <Image src={heroBadge} alt={"hero badge"} class="md:w-20 lg:w-24 w-48 fill-current"/>
+  </div>
   <div class="flex flex-col items-start justify-end text-white md:w-3/4 lg:w-1/2 bg-red-900 self-end">
     <h1 class="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-medium font-['GT Flexa'] uppercase tracking-tight leading-none">Okouzlete přírodou, 
       investujte</h1>

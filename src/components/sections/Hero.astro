@@ -3,7 +3,7 @@ import { Image } from 'astro:assets';
 import heroBadge from "./../../assets/images/hero--badge.svg"
 import heroBackground from "./../../assets/images/hero--background.jpeg"
 ---
-<section class="relative flex w-full h-screen bg-cover py-14 px-10 md:py-12 md:px-16 lg:px-20 lg:py-16 bg-auto bg-center lg:bg-center" style=`background-image: url(/src/assets/images/hero--background.jpeg)`>
+<section class="rounded-br-[100px] rounded-bl-[100px] relative flex w-full h-screen bg-cover py-14 px-10 md:py-12 md:px-16 lg:px-20 lg:py-16 bg-auto bg-center lg:bg-center" style=`background-image: url(/src/assets/images/hero--background.jpeg)`>
   <div>
     <Image src={heroBadge} alt={"hero badge"} class="md:w-20 lg:w-40 fill-current"/>
   </div>

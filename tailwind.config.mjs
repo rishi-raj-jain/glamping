@@ -4,14 +4,19 @@ export default {
 	theme: {
 	  extend: {
 		animation: {
-		  marquee: 'marquee 50s linear infinite',
-		  rotate: 'spin 10s linear infinite',
+			marquee: 'marquee 80s linear infinite',
+			marquee2: 'marquee2 80s linear infinite',
+			rotate: 'spin 10s linear infinite',
 		},
 		keyframes: {
-		  marquee: {
-			'0%': { transform: 'translateX(0%)' },
-			'100%': { transform: 'translateX(-100%)' },
-		  },
+			marquee: {
+				'0%': { transform: 'translateX(0%)' },
+				'100%': { transform: 'translateX(-100%)' },
+			  },
+			  marquee2: {
+				'0%': { transform: 'translateX(100%)' },
+				'100%': { transform: 'translateX(0%)' },
+			  },
 		  spin: {
 			'0%': { transform: 'rotate(0deg)' },
 			'100%': { transform: 'rotate(360deg)' },

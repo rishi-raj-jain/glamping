@@ -3,54 +3,63 @@ import { Image } from 'astro:assets';
 import heroBadge from "./../../assets/images/hero--badge.svg"
 import heroBackground from "./../../assets/images/hero--background.jpeg"
 ---
-<section class="rounded-br-[100px] rounded-bl-[100px] relative flex w-full h-screen bg-cover py-14 px-10 md:py-12 md:px-16 lg:px-20 lg:py-16 bg-auto bg-center lg:bg-center" style=`background-image: url(/src/assets/images/hero--background.jpeg)`>
+<section id="hero" class="relative flex flex-col justify-between h-screen bg-no-repeat bg-cover bg-center lg:bg-center" style=`background-image: url(/src/assets/images/hero--background.jpeg)`>
+  
+  <!-- heroBadge -->
   <div>
     <Image src={heroBadge} alt={"hero badge"} class="md:w-20 lg:w-40 fill-current"/>
   </div>
-  <div class="flex flex-col items-start justify-end text-white md:w-3/4 lg:w-1/2 bg-red-900 self-end">
-    <h1 class="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-medium font-['GT Flexa'] uppercase tracking-tight leading-none">Okouzlete přírodou, 
-      investujte</h1>
-      <h1 class="text-2xl sm:text-6xl md:text-7xl lg:text-4xl font-medium font-['GT Flexa'] uppercase tracking-tight leading-none rotate-[-15deg]">do</h1>
-    <h1 class="text-5xl sm:text-6xl md:text-ß7xl lg:text-8xl font-medium font-['GT Flexa'] uppercase tracking-tight leading-none text-green-200">glampingu</h1>
+
+  <!-- textContent -->
+  <div class="relative flex flex-col text-white bg-red-900 w-1/2">
+    <h1 class="text-8xl">Okouzlete přírodou, investujte <span class="absolute text-green-800 left-0 top-60 rotate-[-15deg]">do</span>glampingu</h1>
   </div>
+
 </section>
 
-<!-- OLD MARKUP -->
-<!-- <div class="w-full h-screen flex flex-col items-start justify-end py-20 px-40 bg-cover bg-[url('/src/assets/images/hero--background.jpeg')]">
-  <div class="w-1/2"><h1 class="text-white text-7xl font-medium font-['GT Flexa'] uppercase">Okouzlete přírodou, 
-    investujte</h1></div>
-  <div><h1 class="text-green-200 text-7xl font-medium font-['GT Flexa'] uppercase">glampingu</h1></div>
-  <div class="text-white text-7xl font-normal font-['Bachelorette PERSONAL USE ONLY'] leading-[74.16px] -rotate-15 absolute bottom-12">do</div>
-</div> -->
+
+<div class="bg-center bg-cover bg-no-repeat h-screen" style=" background-image: linear-gradient(
+
+rgba(0, 0, 0, 0.6),
+
+rgba(0, 0, 0, 0.3)
+
+),
+
+url(/src/assets/images/hero--background.jpeg);">ABC</div>
 
 
-<!-- OLD FIGMA CODE -->
+<div class="relative h-screen bg-no-repeat bg-center bg-cover" style="background-image: url(/src/assets/images/hero--background.jpeg);">
+  
+  <!-- Absolute div for Overlay Image 1 -->
+  <div class="absolute top-[-1rem] right-[-1rem] w-[150px] h-[150px] overflow-hidden bg-no-repeat bg-center bg-contain z-10" style="background-image: url('overlay_image1.png'); opacity: 1;"></div>
 
-<!-- <div class="w-[1440px] h-[1024px] relative bg-[url('/src/assets/images/hero--background.jpeg')]">
-  <div class="w-[559px] left-[153px] top-[629px] absolute text-white text-7xl font-medium font-['GT Flexa'] uppercase leading-[72px]">Okouzlete přírodou, <br/>investujte</div>
-  <div class="w-[559px] left-[154px] top-[870px] absolute text-green-200 text-7xl font-medium font-['GT Flexa'] uppercase leading-[72px]">glampingu</div>
-  <div class="left-[148px] top-[838.23px] absolute origin-top-left rotate-[-15deg] text-white text-7xl font-normal font-['Bachelorette PERSONAL USE ONLY'] leading-[74.16px]">do</div>
-</div> -->
-
-
-
-
+  <!-- Absolute div for Overlay Image 2 -->
+  <div class="absolute bottom-[-1rem] left-[-1rem] w-[150px] h-[150px] overflow-hidden bg-no-repeat bg-center bg-contain z-10" style="background-image: url('overlay_image2.png'); opacity: 1;"></div>
+    ABC
+</div>
 
 <!-- 
 
 
 TODO
 
-- Animations
-- H1 splitted ok?
-- image size on mobile
-- "do" absolute
-- fonts 
-- sizing proportions
-- padding / margin accurate to design
-- div situation!
-- layers on image!
+- layers on image
 - layers on text div!
-- FIX IMAGE ON DIV!
+- overlay on hero
 
+
+- background image sizing/positioning on mobile
+
+- fonts 
+
+- sizing proportions
+
+- padding / margin accurate to design (LATER IN CONFIG GLOBAL)
+
+
+- Animations
+
+
+- sizing proportions (LATER IN CONFIG GLOBAL)
 -->

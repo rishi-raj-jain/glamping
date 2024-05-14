@@ -1,10 +1,12 @@
 ---
 import { Image } from 'astro:assets';
 import heroBadge from "./../../assets/images/hero--badge.svg"
+import Circle from '../../components/Circle.astro'
+// import heroBackground from "./../../assets/assets/images/hero--background.jpeg"
 ---
-<section class="flex w-full h-screen bg-cover py-14 px-10 md:py-12 md:px-16 lg:px-20 lg:py-16 bg-auto bg-center lg:bg-center" style="background-image: url(/src/assets/images/hero--background.jpeg)"></div>
+<section class="relative flex w-full h-screen bg-cover py-14 px-10 md:py-12 md:px-16 lg:px-20 lg:py-16 bg-auto bg-center lg:bg-center" style="background-image: url(/src/assets/images/hero--background.jpeg)">
   <div>
-    <Image src={heroBadge} alt={"hero badge"} class="md:w-20 lg:w-24 w-48 fill-current"/>
+    <Image src={heroBadge} alt={"hero badge"} class="md:w-20 lg:w-40 fill-current"/>
   </div>
   <div class="flex flex-col items-start justify-end text-white md:w-3/4 lg:w-1/2 bg-red-900 self-end">
     <h1 class="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-medium font-['GT Flexa'] uppercase tracking-tight leading-none">Okouzlete přírodou, 
@@ -12,9 +14,10 @@ import heroBadge from "./../../assets/images/hero--badge.svg"
       <h1 class="text-2xl sm:text-6xl md:text-7xl lg:text-4xl font-medium font-['GT Flexa'] uppercase tracking-tight leading-none rotate-[-15deg]">do</h1>
     <h1 class="text-5xl sm:text-6xl md:text-ß7xl lg:text-8xl font-medium font-['GT Flexa'] uppercase tracking-tight leading-none text-green-200">glampingu</h1>
   </div>
+  <Circle />
 </section>
 
-
+<!-- OLD MARKUP -->
 <!-- <div class="w-full h-screen flex flex-col items-start justify-end py-20 px-40 bg-cover bg-[url('/src/assets/images/hero--background.jpeg')]">
   <div class="w-1/2"><h1 class="text-white text-7xl font-medium font-['GT Flexa'] uppercase">Okouzlete přírodou, 
     investujte</h1></div>

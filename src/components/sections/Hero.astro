@@ -2,9 +2,9 @@
 import { Image } from 'astro:assets';
 import heroBadge from "./../../assets/images/hero--badge.svg"
 import Circle from '../../components/Circle.astro'
-// import heroBackground from "./../../assets/assets/images/hero--background.jpeg"
+import heroBackground from "./../../assets/images/hero--background.jpeg"
 ---
-<section class="relative flex w-full h-screen bg-cover py-14 px-10 md:py-12 md:px-16 lg:px-20 lg:py-16 bg-auto bg-center lg:bg-center" style="background-image: url(/src/assets/images/hero--background.jpeg)">
+<section class="relative flex w-full h-screen bg-cover py-14 px-10 md:py-12 md:px-16 lg:px-20 lg:py-16 bg-auto bg-center lg:bg-center" style=`background-image: url(/src/assets/images/hero--background.jpeg)`>
   <div>
     <Image src={heroBadge} alt={"hero badge"} class="md:w-20 lg:w-40 fill-current"/>
   </div>
@@ -53,5 +53,6 @@ TODO
 - div situation!
 - layers on image!
 - layers on text div!
+- FIX IMAGE ON DIV!
 
 -->

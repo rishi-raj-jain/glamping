@@ -3,50 +3,32 @@ import { Image } from 'astro:assets';
 import heroBadge from "./../../assets/images/hero--badge.svg"
 import heroBackground from "./../../assets/images/hero--background.jpeg"
 ---
-<section id="hero" class="relative flex flex-col justify-between h-screen bg-no-repeat bg-cover bg-center lg:bg-center" style=`background-image: url(/src/assets/images/hero--background.jpeg)`>
-  
-  <!-- heroBadge -->
+<section id="hero" class="relative flex flex-col justify-between h-screen bg-no-repeat bg-cover bg-center lg:bg-center" style="background-image: url(/src/assets/images/hero--background.jpeg)">
+  <div class="absolute inset-0">
+    <div class="w-full h-full relative">
+      <div class="absolute inset-0 bg-overlay bg-no-repeat bg-contain lg:bg-cover" style="background-image: url('/src/assets/images/dark-overlay-layer-doubled.png')"></div>
+      <div class="absolute inset-0 bg-overlay bg-no-repeat bg-contain lg:bg-cover" style="background-image: url('/src/assets/images/sunray-30.png')"></div>
+    </div>
+  </div>
+  <!-- Content -->
+  <!-- Hero badge -->
   <div>
     <Image src={heroBadge} alt={"hero badge"} class="md:w-20 lg:w-40 fill-current"/>
   </div>
-
-  <!-- textContent -->
+  <!-- Text -->
   <div class="relative flex flex-col text-white bg-red-900 w-1/2">
-    <h1 class="text-8xl">Okouzlete přírodou, investujte <span class="absolute text-green-800 left-0 top-60 rotate-[-15deg]">do</span>glampingu</h1>
+    <h1 class="text-8xl">Okouzlete přírodou, investujte <span class="absolute text-green-800 left-0 bottom-10 rotate-[-15deg]">do</span>glampingu</h1>
   </div>
 
 </section>
-
-
-<div class="bg-center bg-cover bg-no-repeat h-screen" style=" background-image: linear-gradient(
-
-rgba(0, 0, 0, 0.6),
-
-rgba(0, 0, 0, 0.3)
-
-),
-
-url(/src/assets/images/hero--background.jpeg);">ABC</div>
-
-
-<div class="relative h-screen bg-no-repeat bg-center bg-cover" style="background-image: url(/src/assets/images/hero--background.jpeg);">
-  
-  <!-- Absolute div for Overlay Image 1 -->
-  <div class="absolute top-[-1rem] right-[-1rem] w-[150px] h-[150px] overflow-hidden bg-no-repeat bg-center bg-contain z-10" style="background-image: url('overlay_image1.png'); opacity: 1;"></div>
-
-  <!-- Absolute div for Overlay Image 2 -->
-  <div class="absolute bottom-[-1rem] left-[-1rem] w-[150px] h-[150px] overflow-hidden bg-no-repeat bg-center bg-contain z-10" style="background-image: url('overlay_image2.png'); opacity: 1;"></div>
-    ABC
-</div>
 
 <!-- 
 
 
 TODO
 
-- layers on image
 - layers on text div!
-- overlay on hero
+
 
 
 - background image sizing/positioning on mobile
@@ -63,3 +45,21 @@ TODO
 
 - sizing proportions (LATER IN CONFIG GLOBAL)
 -->
+
+
+
+
+
+<!-- <section id="hero" class="relative flex flex-col justify-between h-screen bg-no-repeat bg-cover bg-center lg:bg-center" style=`background-image: url(/src/assets/images/hero--background.jpeg)`>
+  
+
+  <div>
+    <Image src={heroBadge} alt={"hero badge"} class="md:w-20 lg:w-40 fill-current"/>
+  </div>
+
+
+  <div class="relative flex flex-col text-white bg-red-900 w-1/2">
+    <h1 class="text-8xl">Okouzlete přírodou, investujte <span class="absolute text-green-800 left-0 top-60 rotate-[-15deg]">do</span>glampingu</h1>
+  </div>
+
+</section> -->

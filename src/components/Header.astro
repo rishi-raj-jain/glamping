@@ -3,12 +3,6 @@ import Navbar from '../components/Navbar.astro'
 import { Image } from 'astro:assets';
 import logoImage from "./../assets/images/logo.png"
 ---
-
-
-
-<!-- HEADER -->
-
-
 <header class="bg-gray-200">
 
     <div class="grid grid-cols-12">
@@ -17,7 +11,12 @@ import logoImage from "./../assets/images/logo.png"
         <div class="col-span-1 bg-gray-100"></div>
     
         <div class="col-start-2 col-span-10 bg-red-100">
-    
+
+        <div class="flex flex-row-reverse md:flex md:flex-row justify-between items-center">
+            <Navbar/>
+            <Image src={logoImage} alt={"logo image"}/>
+        </div>
+
         </div>
 
         <!-- Delete this div -->

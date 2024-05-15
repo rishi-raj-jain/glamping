@@ -1,8 +1,10 @@
 ---
 import { Image } from 'astro:assets';
 import sectionBackground from "./../../assets/images/secondSection_image.jpg"
+import sectionLine from "./../../assets/images/section-line.svg"
 ---
-<section id="secondSection" class="flex flex-col items-center lg:mt-60">
+<section id="secondSection" class="relative flex flex-col items-center lg:mt-60">
+  <Image src={sectionLine} alt={"section line"} class="w-screen"/>
   
   <!-- Content wrapper -->
   <div class="relative bg-red-900 w-1/2 place-self-start ml-60">

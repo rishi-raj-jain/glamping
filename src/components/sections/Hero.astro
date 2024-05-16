@@ -1,8 +1,8 @@
 ---
 import { Image } from 'astro:assets';
 import heroBadge from "./../../assets/images/hero--badge.svg"
-import stars from "./../../assets/images/stars.png"
-import drops from "./../../assets/images/drops.png"
+import stars from "./../../assets/images/stars.svg"
+import drops from "./../../assets/images/drops.svg"
 import sectionBackground from "./../../assets/images/hero--background--no-round.webp"
 import overlayImg from "./../../assets/images/dark-overlay-layer-doubled.png"
 import sunrayImg from "./../../assets/images/sunray-30.png"
@@ -27,9 +27,9 @@ import sunrayImg from "./../../assets/images/sunray-30.png"
             <!-- Content wrapper -->
             <div class="relative z-10 flex flex-col text-white justify-between">
                 <Image src={heroBadge} alt={"hero badge"} class="md:w-20 lg:w-40 fill-current"/>
-                <h1 class="relative text-6xl lg:text-8xl">Okouzlete přírodou, investujte <span class="text-glamping-light-green absolute left-0 bottom-8 rotate-[-15deg]">do</span>glampingu</h1>
-                <Image src={stars} alt={" "} class="absolute bottom-[200px]"/>
-                <!-- <Image src={drops} alt={" "} class="absolute"/> -->
+                <h1 class="relative text-7xl md:text-8xl">Okouzlete přírodou, investujte <span class="text-glamping-light-green absolute left-0 bottom-8 rotate-[-15deg]">do</span>glampingu</h1>
+                <Image src={stars} alt={" "} class="absolute bottom-[14rem] md:bottom-[6rem] lg:bottom-[18rem]"/>
+                <Image src={drops} alt={" "} class="absolute bottom-[0rem] left-[16rem]"/>
             </div>
         </div>
         <!-- Helper column / delete later -->

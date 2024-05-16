@@ -4,25 +4,19 @@ import { Image } from 'astro:assets';
 import logoImage from "./../assets/images/logo.png"
 ---
 <header class="sticky top-0">
-
+    <!-- Column layout -->
     <div class="grid grid-cols-6 lg:grid-cols-12 gap-2">
-    
-        <!-- Delete this div -->
-        <div class="col-span-1 bg-gray-100"></div>
-    
-        <div class="col-start-2 col-span-10 bg-red-100">
-
-        <div class="flex flex-row-reverse md:flex md:flex-row justify-between items-center">
-            <Navbar/>
-            <Image src={logoImage} alt={"logo image"}/>
+         <!-- Helper column / delete later -->
+        <div class="hidden col-span-1 bg-gray-100"></div>
+        <!-- Content column -->
+        <div class="col-start-1 col-span-6 lg:col-start-2 lg:col-span-10">
+            <!-- Navbar wrapper -->
+            <div class="flex flex-row-reverse md:flex md:flex-row justify-between items-center">
+                <Navbar/>
+                <Image src={logoImage} alt={"logo image"}/>
+            </div>
         </div>
-
-        </div>
-
-        <!-- Delete this div -->
-        <div class="col-span-1 bg-gray-100"></div>
-
+        <!-- Helper column / delete later -->
+        <div class="hidden col-span-1 bg-gray-100"></div>
     </div>
-    
-    
 </header>

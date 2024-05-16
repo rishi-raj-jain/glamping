@@ -4,19 +4,18 @@ import heroBadge from "./../../assets/images/hero--badge.svg"
 import stars from "./../../assets/images/stars.png"
 import drops from "./../../assets/images/drops.png"
 import sectionBackground from "./../../assets/images/hero--background--no-round.webp"
-import sectionBackgroundMobile from "./../../assets/images/hero-background-mobile-noround.webp"
 import overlayImg from "./../../assets/images/dark-overlay-layer-doubled.png"
 import sunrayImg from "./../../assets/images/sunray-30.png"
 ---
-<section id="hero" class="bg-no-repeat bg-top lg:bg-cover" style=`background-image: url(${sectionBackground.src})`>
+<section id="hero" class="rounded-b-[50px] bg-no-repeat bg-top lg:bg-cover" style=`background-image: url(${sectionBackground.src})`>
     <!-- Overlays -->
     <div class="lg:block absolute inset-0">
         <div class="w-full h-full relative">
         <!-- Mobile -->
-        <div class="lg:hidden absolute opacity-40 inset-0 bg-overlay bg-gradient-to-t from-dark-green via-dark-green to-transparent"></div>
+        <div class="rounded-b-[50px] lg:hidden absolute opacity-40 inset-0 bg-overlay bg-gradient-to-t from-dark-green via-dark-green to-transparent"></div>
         <!-- Desktop -->
-        <div class="hidden lg:block absolute inset-0 bg-overlay bg-no-repeat bg-cover" style=`background-image: url(${overlayImg.src})`></div>
-        <div class="hidden lg:block absolute inset-0 bg-overlay bg-no-repeat bg-cover" style=`background-image: url(${sunrayImg.src})`></div>
+        <div class="rounded-b-[50px] hidden lg:block absolute inset-0 bg-overlay bg-no-repeat bg-cover" style=`background-image: url(${overlayImg.src})`></div>
+        <div class="rounded-b-[50px] hidden lg:block absolute inset-0 bg-overlay bg-no-repeat bg-cover" style=`background-image: url(${sunrayImg.src})`></div>
         </div>
     </div>
     <!-- Column layout -->
@@ -24,13 +23,13 @@ import sunrayImg from "./../../assets/images/sunray-30.png"
         <!-- Helper column / delete later -->
         <div class="col-span-1"></div>
         <!-- Content column -->
-        <div class="col-start-1 col-span-6 lg:col-start-2 lg:col-span-5">
+        <div class="col-start-1 col-span-6 lg:col-start-2 lg:col-span-5 h-screen flex">
             <!-- Content wrapper -->
-            <div class="flex flex-col text-white justify-between h-screen">
+            <div class="relative z-10 flex flex-col text-white justify-between">
                 <Image src={heroBadge} alt={"hero badge"} class="md:w-20 lg:w-40 fill-current"/>
-                <h1 class="font-gtflexamed relative text-6xl lg:text-8xl">Okouzlete přírodou, investujte <span class="text-glamping-light-green absolute left-0 bottom-8 rotate-[-15deg]">do</span>glampingu</h1>
-                <!-- <Image src={stars} alt={" "} class="absolute"/>
-                <Image src={drops} alt={" "} class="absolute"/> -->
+                <h1 class="relative text-6xl lg:text-8xl">Okouzlete přírodou, investujte <span class="text-glamping-light-green absolute left-0 bottom-8 rotate-[-15deg]">do</span>glampingu</h1>
+                <Image src={stars} alt={" "} class="absolute bottom-[200px]"/>
+                <!-- <Image src={drops} alt={" "} class="absolute"/> -->
             </div>
         </div>
         <!-- Helper column / delete later -->
@@ -40,8 +39,6 @@ import sunrayImg from "./../../assets/images/sunray-30.png"
     </div>
 
 </section>
-
-
 
 <style>
     @media (max-width: 767px) {

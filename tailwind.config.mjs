@@ -18,8 +18,8 @@ export default {
 		  },
 		},
 		animation: {
-		  marquee: 'marquee 80s linear infinite',
-		  marquee2: 'marquee2 80s linear infinite',
+		  marquee: 'marquee 160s linear infinite',
+		  marquee2: 'marquee2 160s linear infinite',
 		  rotate: 'spin 10s linear infinite',
 		  pulseSlow: 'pulseSlow 6s cubic-bezier(0.4, 0, 0.6, 1) infinite',
 

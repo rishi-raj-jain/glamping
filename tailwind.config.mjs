@@ -2,12 +2,20 @@
 export default {
 	content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
 	extend: {
-	  colors: {
-		'dark-green': '#1F3832',
-		'glamping-light-green': '#C8E8C3',
-		'primary-light': '#F3EDDF',
-		'hover-color': '#8C8C8C',
-	  },
+        colors: {
+            'dark-green': {
+              100: "#1F3832",
+            },
+            'glamping-light-green': {
+                100: "#C8E8C3",
+              },
+            'primary-light': {
+            100: "#F3EDDF",
+            },
+            'hover-color': {
+                100: "#8C8C8C",
+            },
+        },
 	  animation: {
 		marquee: 'marquee 80s linear infinite',
 		marquee2: 'marquee2 80s linear infinite',

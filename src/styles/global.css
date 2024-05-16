@@ -1,6 +1,7 @@
-/* @font-face {
-    font-family: 'GtFlexa';
-    src: url('/src/assets/fonts/GT-Flexa-Extended-Medium.woff2') format('woff2'),
+@font-face {
+    font-family: 'GtFlexaMed';
+    src: url('/fonts/GT-Flexa-Extended-Medium.woff2') format('woff2');
+    font-weight: medium;
+    font-style: normal;
+    font-display: swap;
   }
-
- */

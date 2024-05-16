@@ -3,6 +3,9 @@ export default {
 	content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
 	theme: {
 	  extend: {
+		fontFamily: {
+			gtflexamed: ['GtFlexaMed', "sans-serif"],
+		  },
 		animation: {
 			marquee: 'marquee 80s linear infinite',
 			marquee2: 'marquee2 80s linear infinite',

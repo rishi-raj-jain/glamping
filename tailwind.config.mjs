@@ -2,6 +2,15 @@
 export default {
 	content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
 	theme: {
+		colors: {
+			transparent: 'transparent',
+			current: 'currentColor',
+			'white': '#FFFFFF',
+			'dark-green': '#1F3832',
+			'glamping-light-green': '#C8E8C3',
+			'primary-light': '##F3EDDF',
+			'hover-color': '#8C8C8C',
+		  },
 	  extend: {
 		fontFamily: {
 			gtflexamed: ['GtFlexaMed', "sans-serif"],

@@ -4,50 +4,45 @@ import sectionBackground from "./../../assets/images/secondSection_image.jpg"
 import sectionLine from "./../../assets/images/section-line.svg"
 ---
 <section id="secondSection" class="relative">
-  <Image src={sectionLine} alt={"section line"} class="absolute bottom-10 w-full"/>
-  
+  <!-- Section line / FIX POSITIONING!!! -->
+  <Image src={sectionLine} alt={"section line"} class="absolute md:bottom-10 w-full"/>
     <!-- Column layout -->
     <div class="grid grid-cols-12 gap-2">
-        
-      <!-- Delete this div -->
-      <div class="col-start-1"></div>
-
+      <!-- Helper column / delete later -->
+      <div class="col-start-1 bg-gray-100"></div>
+      <!-- Content column -->
       <div class="col-start-2 col-span-9">
-
+        <!-- Content wrapper -->
         <div class="relative">
           <h2 class="text-5xl lg:text-6xl uppercase">Popularita <span class="absolute text-green-800 text-4xl top-20">glampingu</span>roste</h2>
         </div>
-
       </div>
-
-
-  
+      <!-- Content column -->
       <div class="col-start-5 col-span-4">
+        <!-- Content wrapper -->
         <div>
           <p>Glamping je populární. Poptávka po něm celosvětově roste. Za noc v glampingu hosté zaplatí od 2 do 7 tisíc korun.</p>
           <p>Nejpopulárnější je mezi mladými, kteří pobyty navzájem sdílejí na sítích. Pokud děláte glamping dobře až 80% nocí je ročně zarezervováno.</p>
         </div>
-
-        
       </div>
+      <!-- Content column -->
       <div class="col-start-9 col-span-4">
-<!-- 
+      <!-- Content wrapper -->
         <div class="flex items-start">
-          <p class="text-6xl">"</p>
+          <!--!!! !!! !!! <p class="text-6xl">"</p> QUOTE SYMBOL MISSING !!! !!! !!!-->
           <div class="flex flex-col">
-            <p class="uppercase">v roce <span class="text-green-900">2030</span> má být  glampingový trh <span class="text-green-900">dvojnásobný</span></p>
+            <p class="uppercase">v roce <span class="text-green-900">2030</span> má být glampingový trh <span class="text-green-900">dvojnásobný</span></p>
             <span class="text-sm">Zdroj: GrandView Reserach</span> 
           </div>
-        </div> -->
+        </div>
 
       </div>
     </div>
-  
   </div>
 
 
 
-<!-- Div image -->
+<!-- Image section bottom -->
 <div class="relative flex w-full h-80 bg-cover bg-center lg:bg-center" style=`background-image: url(${sectionBackground.src})`>
   <span class="text-orange-900 uppercase absolute rotate-[90deg]">Investujte do vlastního glampingu</span>
 </div>

@@ -7,15 +7,15 @@ import sectionBackground from "./../../assets/images/hero--background--no-round.
 import overlayImg from "./../../assets/images/dark-overlay-layer-doubled.png"
 import sunrayImg from "./../../assets/images/sunray-30.png"
 ---
-<section id="hero" class="rounded-b-[50px] bg-no-repeat bg-top lg:bg-cover" style=`background-image: url(${sectionBackground.src})`>
+<section id="hero" class="rounded-b-[25px] lg:rounded-b-[50px] bg-no-repeat bg-top lg:bg-cover" style=`background-image: url(${sectionBackground.src})`>
     <!-- Overlays -->
     <div class="lg:block absolute inset-0">
         <div class="w-full h-full relative">
         <!-- Mobile -->
-        <div class="rounded-b-[50px] lg:hidden absolute opacity-40 inset-0 bg-overlay bg-gradient-to-t from-dark-green via-dark-green to-transparent"></div>
+        <div class="rounded-b-[25px] lg:rounded-b-[50px] lg:hidden absolute opacity-40 inset-0 bg-overlay bg-gradient-to-t from-dark-green via-dark-green to-transparent"></div>
         <!-- Desktop -->
-        <div class="rounded-b-[50px] hidden lg:block absolute inset-0 bg-overlay bg-no-repeat bg-cover" style=`background-image: url(${overlayImg.src})`></div>
-        <div class="rounded-b-[50px] hidden lg:block absolute inset-0 bg-overlay bg-no-repeat bg-cover" style=`background-image: url(${sunrayImg.src})`></div>
+        <div class="rounded-b-[25px] lg:rounded-b-[50px] hidden lg:block absolute inset-0 bg-overlay bg-no-repeat bg-cover" style=`background-image: url(${overlayImg.src})`></div>
+        <div class="rounded-b-[25px] lg:rounded-b-[50px] hidden lg:block absolute inset-0 bg-overlay bg-no-repeat bg-cover" style=`background-image: url(${sunrayImg.src})`></div>
         </div>
     </div>
     <!-- Column layout -->
@@ -26,16 +26,16 @@ import sunrayImg from "./../../assets/images/sunray-30.png"
         <div class="col-start-1 col-span-6 lg:col-start-2 lg:col-span-5 h-screen flex">
             <!-- Content wrapper -->
             <div class="relative z-10 flex flex-col text-white justify-between">
-                <Image src={heroBadge} alt={"hero badge"} class="md:w-20 lg:w-40 fill-current"/>
-                <h1 class="relative text-7xl md:text-8xl">Okouzlete přírodou, investujte <span class="text-glamping-light-green absolute left-0 bottom-8 rotate-[-15deg]">do</span>glampingu</h1>
-                <Image src={stars} alt={" "} class="absolute bottom-[14rem] md:bottom-[6rem] lg:bottom-[18rem]"/>
-                <Image src={drops} alt={" "} class="absolute bottom-[0rem] left-[16rem]"/>
+                <Image src={heroBadge} alt={"hero badge"} class="w-32 fill-current"/>
+                <h1 class="uppercase relative text-4xl md:text-7xl">Okouzlete přírodou, investujte <span class="text-glamping-light-green absolute left-0 bottom-8 rotate-[-15deg]">do</span>glampingu</h1>
+                <Image src={stars} alt={" "} class="w-80 lg:w-auto absolute bottom-[7rem] md:bottom-[6rem] lg:bottom-[13rem]"/>
+                <Image src={drops} alt={" "} class="absolute w-14 lg:w-auto bottom-[2rem] left-[16rem] lg:bottom-[6rem] lg:left-[34rem]"/>
             </div>
         </div>
         <!-- Helper column / delete later -->
         <div class="hidden lg:col-start-7 lg:col-span-5 bg-red-100">ABC</div>
         <!-- Helper column / delete later -->
-        <div class="hidden col-span-1 bg-gray-100">DEF</div>
+        <div class="hidden col-span-1 bg-white-100 h-screen">DEF</div>
     </div>
 
 </section>

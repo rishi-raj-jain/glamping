@@ -1,0 +1,19 @@
+---
+---
+<div id="preloader" class="fixed top-0 left-0 w-full h-full bg-dark-green-100 flex justify-center items-center z-50 animate-fadeOut">    <!-- Loading spinner or animation goes here -->
+    <div class="animate-pulse text-white text-2xl">Loading...</div>
+</div>
+
+<script>
+
+document.addEventListener("DOMContentLoaded", function() {
+  // When the DOM content is loaded
+  var preloader = document.getElementById("preloader");
+  
+  // Add a delay before hiding the preloader
+  setTimeout(function() {
+    preloader.classList.add("hidden"); // Add loaded class to hide the preloader
+  }, 2000); // Adjust the delay time (in milliseconds) as needed
+});
+
+</script>

@@ -1,11 +1,11 @@
 ---
 import { Image } from 'astro:assets';
-import circleSvg from "./../assets/images/circle.svg"
+import circleSvg from "./../assets/images/circle-transparent.svg"
 
 ---
 
 
 <div class="hidden md:block fixed z-40 bottom-0 right-0">
-    <Image src={circleSvg} alt={"circle svg"} class="max-w-22 animate-rotate"/>
+    <button class="max-w-[100px] bg-dark-green rounded-full p-2 animate-rotate hover:bg-glamping-light-green"><Image src={circleSvg} alt={"circle svg"}/></button>
 </div>
 

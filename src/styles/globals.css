@@ -1,6 +1,14 @@
 @font-face {
     font-family: 'GtFlexaMed';
-    src: url('/public/fonts/GT-Flexa-Extended-Medium.woff2') format('woff2');
+    src: url('/fonts/GT-Flexa-Extended-Medium.woff2') format('woff2');
+    font-weight: medium;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: 'Bachelorette';
+    src: url('/fonts/Bachelorette_PERSONAL_USE_ONLY.woff2') format('woff2');
     font-weight: medium;
     font-style: normal;
     font-display: swap;
@@ -8,5 +16,9 @@
 
 
   h1 {
-    font-family: "GtFlexaMed", cursive;
+    font-family: "GtFlexaMed";
+  }
+
+  .bachelorette {
+    font-family: "Bachelorette";
   }

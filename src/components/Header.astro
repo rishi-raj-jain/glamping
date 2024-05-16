@@ -3,7 +3,7 @@ import Navbar from '../components/Navbar.astro'
 import { Image } from 'astro:assets';
 import logoImage from "./../assets/images/logo.png"
 ---
-<header class="sticky top-0 bg-white/90 border-b-[1px] border-b-black md:border-none z-50">
+<header id="header" class="sticky top-0 ">
     <!-- Column layout -->
     <div class="grid grid-cols-6 lg:grid-cols-12 px-5 sm:items-center sm:h-[60px] lg:h-auto">
          <!-- Helper column / delete later -->
@@ -20,3 +20,11 @@ import logoImage from "./../assets/images/logo.png"
         <div class="hidden col-span-1 bg-gray-100"></div>
     </div>
 </header>
+
+
+<!-- 
+WHEN STICKY:
+
+bg-white/90 border-b-[1px] border-b-black md:border-none z-50 -->
+
+

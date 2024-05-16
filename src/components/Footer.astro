@@ -1,9 +1,22 @@
 ---
-import { Image } from 'astro:assets';
-import heroBadge from "./../assets/images/hero--badge.svg"
-import stars from "./../assets/images/stars.png"
-import drops from "./../assets/images/drops.png"
+
 ---
 
-<h1>Footer component</h1>
+<footer class="h-screen bg-green-200">
+
+    <div class="grid grid-cols-12 gap-2">
+
+        <div class="col-span-1 bg-gray-100">abc</div>
+    
+        <!-- Delete this div -->
+        <div class="col-start-2 col-span-10 bg-gray-100">
+            <h2>Footer component</h2>
+        </div>
+
+        <div class="col-span-1 bg-gray-100">abc</div>
+
+    </div>
+    
+    
+</footer>
 

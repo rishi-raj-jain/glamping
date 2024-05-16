@@ -12,9 +12,6 @@ export default {
 			'hover-color': '#8C8C8C',
 		  },
 	  extend: {
-		fontFamily: {
-			gtflexamed: ['GtFlexaMed', "sans-serif"],
-		  },
 		animation: {
 			marquee: 'marquee 80s linear infinite',
 			marquee2: 'marquee2 80s linear infinite',

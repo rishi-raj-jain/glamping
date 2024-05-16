@@ -1,8 +1,7 @@
 ---
-import { Image } from 'astro:assets';
-import logoImage from "./../assets/images/logo.png"
-import heroBadge from "./../assets/images/hero--badge.svg"
+
 ---
+
 <!-- Desktop menu -->
 <div class="hidden md:block">
     <nav class="flex justify-between items-center h-20">
@@ -17,35 +16,29 @@ import heroBadge from "./../assets/images/hero--badge.svg"
 
 <!-- Mobile menu -->
 <div class="flex items-center md:hidden">
-    <span id="menu-text" class="uppercase">Menu</span>
+    <span id="toggle-menu" class="uppercase">Menu</span>
     <label class="relative z-40 cursor-pointer px-3 py-6" for="mobile-menu">
         <input class="peer hidden" type="checkbox" id="mobile-menu" />
-        <div class="relative z-50 block h-[2px] w-7 bg-black before:absolute before:-top-2 before:block before:h-[2px] before:w-full before:bg-black before:transition-all before:duration-200 before:ease-out before:content-[''] after:absolute after:top-2 after:block after:h-[2px] after:w-full after:bg-black after:transition-all after:duration-200 after:ease-out after:content-[''] peer-checked:bg-transparent before:peer-checked:top-0 before:peer-checked:rotate-45 before:peer-checked:transform after:peer-checked:top-0 after:peer-checked:-rotate-45 after:peer-checked:transform"></div>
-        <div class="fixed inset-0 z-[99999] hidden h-full w-full bg-black/50 backdrop-blur-sm peer-checked:block">
-            &nbsp;
-        </div>
-        <div class="fixed top-0 right-0 z-40 h-full w-full translate-x-full transition duration-500 peer-checked:translate-x-0">
-            <div class="flex flex-col  justify-center float-right min-h-full w-[100%] bg-green-800 px-6 pt-12 shadow-2xl">
-                <menu class="flex flex-col gap-6 text-lg text-white uppercase">
-                    <li class="mr-4 text-2xl"><a href="#">Můj glamping™</a></li>
-                    <li class="mr-4 text-2xl"><a href="#">Glampiny-house™</a></li>
-                    <li class="mr-4 text-2xl"><a href="#">O nás</a></li>
-                    <li class="mr-4 text-2xl"><a href="#">Kontakt</a></li>
-                </menu>
-                <div class="bg-white">
-                    <ul class="list-none">
-                        <li><a href="mailto:hello@glamping.cz">hello@glamping.cz</a></li>
-                        <li><a href="tel:+420585451251">tel:+420585451251</a></li>
-                    </ul>
-                </div>
-                <Image src={heroBadge} alt={"hero badge"} class="md:w-20 lg:w-40 fill-current"/>
-            </div>
-        </div>
+        <div class="relative z-50 block h-[2px] w-7 bg-black before:absolute before:-top-2 before:block before:h-[2px] before:w-full before:bg-black before:transition-all before:duration-500 before:ease-out before:content-[''] after:absolute after:top-2 after:block after:h-[2px] after:w-full after:bg-black after:transition-all after:duration-500 after:ease-out after:content-[''] peer-checked:bg-transparent before:peer-checked:top-0 before:peer-checked:rotate-45 before:peer-checked:transform after:peer-checked:top-0 after:peer-checked:-rotate-45 after:peer-checked:transform"></div>
     </label>
 </div>
 
+<!-- Fullscreen menu -->
+<div id="fullscreen-menu">
 
-<!-- Displaying logic -->
+    <div id="fullscreen-menu-wrapper" class="bg-green-200 absolute top-0 right-0 w-screen h-screen transition duration-1000 opacity-0">
+        <ul class="list-none flex flex-col items-center gap-6 text-lg uppercase text-black">
+            <li><a href="#">Můj glamping™</a></li>
+            <li><a href="#">Glampiny-house™</a></li>
+            <li><a href="#">O nás</a></li>
+            <li><a href="#">Kontakt</a></li>
+            <li><a href="mailto:hello@glamping.cz">hello@glamping.cz</a></li>
+            <li><a href="tel:+420585451251">tel:+420585451251</a></li>
+        </ul>
+    </div>
+
+</div>
+
 <script>
     import { isOpen } from '../navbar.js';
   
@@ -55,5 +48,12 @@ import heroBadge from "./../assets/images/hero--badge.svg"
     }
   
     // Add an event listener to the button
-    document.getElementById('mobile-menu').addEventListener('click', openNavbar);
+    document.getElementById('mobile-menu').addEventListener('click',() => {
+        const fullMenu = document.getElementById('fullscreen-menu')
+        const fullMenuWrapper = document.getElementById('fullscreen-menu-wrapper')
+        fullMenuWrapper.classList.toggle('opacity-100');
+
+        openNavbar()
+
+    });
 </script>

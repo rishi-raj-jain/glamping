@@ -7,7 +7,7 @@ import sectionBackground from "./../../assets/images/hero--background--no-round.
 import overlayImg from "./../../assets/images/dark-overlay-layer-doubled.png"
 import sunrayImg from "./../../assets/images/sunray-30.png"
 ---
-<section id="hero" class="relative pt-5 px-5 pb-[60px] rounded-b-[25px] lg:rounded-b-[50px] bg-no-repeat bg-fixed bg-top lg:bg-cover" style=`background-image: url(${sectionBackground.src});`>
+<section id="hero" class="relative rounded-b-[25px] lg:rounded-b-[50px] bg-no-repeat bg-fixed bg-top lg:bg-cover" style=`background-image: url(${sectionBackground.src});`>
     <!-- Overlays -->
     <div class="absolute inset-0 w-full h-full">
         <!-- Mobile Overlay -->
@@ -17,7 +17,7 @@ import sunrayImg from "./../../assets/images/sunray-30.png"
         <div class="rounded-b-[25px] lg:rounded-b-[50px] hidden lg:block absolute inset-0 bg-fixed bg-overlay bg-cover animate-pulseSlow" style=`background-image: url(${sunrayImg.src})`></div>
     </div>
     <!-- Column layout -->
-    <div class="relative grid grid-cols-6 lg:grid-cols-12">
+    <div class="relative grid grid-cols-6 lg:grid-cols-12 px-5">
         <!-- Helper column / delete later -->
         <div class="col-span-1"></div>
         <!-- Content column -->
@@ -25,9 +25,9 @@ import sunrayImg from "./../../assets/images/sunray-30.png"
             <!-- Content wrapper -->
             <div class="relative z-10 flex flex-col text-white justify-between">
                 <Image src={heroBadge} alt="hero badge" class="w-[96px] fill-current"/>
-                <h1 class="uppercase relative text-4xl md:text-7xl">Okouzlete přírodou, investujte <span class="absolute left-0 bottom-8 rotate-[-15deg] bachelorette md:text-6xl lowercase">do</span><span class="text-glamping-light-green-100">glampingu</span></h1>
-                <Image src={stars} alt=" " class="w-80 lg:w-auto absolute bottom-[7rem] md:bottom-[6rem] lg:bottom-[13rem]"/>
-                <Image src={drops} alt=" " class="absolute w-14 lg:w-auto bottom-[2rem] left-[16rem] lg:bottom-[6rem] lg:left-[34rem]"/>
+                <h1 class="uppercase relative text-4xl md:text-7xl">Okouzlete přírodou, investujte <div class="relative mt-6"><span class="absolute bottom-12 left-2 rotate-[-15deg] bachelorette md:text-6xl lowercase">do</span><span class="text-glamping-light-green-100">glampingu</span></div></h1>
+                <Image src={stars} alt="stars element" class="w-[32vw] absolute bottom-[7rem] md:bottom-[6rem] lg:bottom-[14.5rem] lg:right-[10rem]"/>
+                <Image src={drops} alt="drops element" class="absolute w-14 lg:w-auto bottom-[2rem] left-[16rem] lg:bottom-[6rem] lg:left-[34rem]"/>
             </div>
         </div>
         <!-- Helper column / delete later -->
@@ -49,4 +49,6 @@ import sunrayImg from "./../../assets/images/sunray-30.png"
 
 <!-- 
 Todo:
-Overlay on mobile!!! -->
+1. Text overlay elements!
+
+-->

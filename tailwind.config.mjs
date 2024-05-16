@@ -18,10 +18,10 @@ export default {
 		  },
 		},
 		animation: {
-		  marquee: 'marquee 160s linear infinite',
-		  marquee2: 'marquee2 160s linear infinite',
+		  marquee: 'marquee 320s linear infinite',
+		  marquee2: 'marquee2 320s linear infinite',
 		  rotate: 'spin 10s linear infinite',
-		  pulseSlow: 'pulseSlow 6s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+		  pulseSlow: 'pulseSlow 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
 
 		},
 		keyframes: {

@@ -21,8 +21,14 @@ export default {
 		  marquee: 'marquee 80s linear infinite',
 		  marquee2: 'marquee2 80s linear infinite',
 		  rotate: 'spin 10s linear infinite',
+		  pulseSlow: 'pulseSlow 6s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+
 		},
 		keyframes: {
+			pulseSlow: {
+				'0%': { opacity: '1' },
+				'50%': { opacity: '0.5' },
+			  },
 		  marquee: {
 			'0%': { transform: 'translateX(0%)' },
 			'100%': { transform: 'translateX(-100%)' },

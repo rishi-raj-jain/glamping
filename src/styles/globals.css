@@ -22,3 +22,17 @@
   .bachelorette {
     font-family: "Bachelorette";
   }
+
+  .text-with-stroke {
+    color: #fff; /* Text color */
+    text-shadow:
+      -1px -1px 0 #000,  
+       1px -1px 0 #000,
+      -1px  1px 0 #000,
+       1px  1px 0 #000; /* Shadow color and positions */
+  
+    /* Vendor prefixes */
+    -webkit-text-fill-color: #fff; /* Text color for WebKit */
+    -webkit-text-stroke: 1px #000; /* Stroke for WebKit */
+  }
+  

@@ -4,33 +4,51 @@ import sectionBackground from "./../../assets/images/secondSection_image.jpg"
 // import sectionLine from "./../../assets/images/section-line.svg"
 import SectionLine from './../../components/SectionLine.astro'
 ---
-<section id="secondSection" class="relative h-screen">
+<section id="secondSection" class="relative">
   
   <!-- Section line -->
   <SectionLine/>
 
-  <!-- Column layout -->
-  <div class="relative grid grid-cols-6 lg:grid-cols-12 px-5">
+  <!-- Column layout TEXT -->
+  <div class="relative grid grid-cols-6 lg:grid-cols-12 px-5 mb-12">
     <!-- Content columnt -->
       <div class="col-start-1 col-span-6 lg:col-start-2 lg:col-span-9 mt-[5rem]">
         <!-- Content wrapper -->
-        <div class="relative">
-          <h2 class="gtflexamed tracking-tight text-[10vw] leading-[9.2rem] uppercase">Popularita <span class="lowercase absolute text-green-800 bachelorette text-[5vw] -left-[4.5rem] bottom-[4rem]">glampingu</span>roste</h2>
+        <div>
+          <h2 class="relative gtflexamed tracking-tight text-[10vw] leading-[9.2rem] uppercase">Popularita<span class="lowercase absolute text-green-800 bachelorette text-[5vw] -left-[4.5rem] bottom-[4rem]">glampingu</span><span class="-z-10">roste</span></h2>
         </div>
       </div>
   </div>
-  </div>
+
+
+
+    <!-- Column layout -->
+    <div class="grid grid-cols-6 lg:grid-cols-12 px-5">
+      <!-- Content column -->
+      <div class="col-start-2 col-span-6 lg:col-start-5 lg:col-span-4">
+        <!-- Content wrapper -->
+        <div>
+          <p class="mb-8">Glamping je populární. Poptávka po něm celosvětově roste. Za noc v glampingu hosté zaplatí od 2 do 7 tisíc korun.</p>
+          <p>Glamping propojuje kempování s pohodlím domova. Provedení je různé. Často se využívají modulární tiny-housy, stany nebo posedy. Kreativitě se meze nekladou.</p>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- Image div -->
+
+    <div class="relative flex w-full h-80 bg-cover bg-center lg:bg-center" style=`background-image: url(${sectionBackground.src})`>
+      <span class="text-orange-900 uppercase absolute rotate-[90deg]">Investujte do vlastního glampingu</span>
+    </div>
+    
+
+
 
 </section>
 
 
 
 
-
-<!-- 
-<div class="relative flex w-full h-80 bg-cover bg-center lg:bg-center" style=`background-image: url(${sectionBackground.src})`>
-  <span class="text-orange-900 uppercase absolute rotate-[90deg]">Investujte do vlastního glampingu</span>
-</div> -->
 
 
 

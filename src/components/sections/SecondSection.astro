@@ -1,53 +1,36 @@
 ---
 import { Image } from 'astro:assets';
 import sectionBackground from "./../../assets/images/secondSection_image.jpg"
-import sectionLine from "./../../assets/images/section-line.svg"
+// import sectionLine from "./../../assets/images/section-line.svg"
+import SectionLine from './../../components/SectionLine.astro'
 ---
-<section id="secondSection" class="relative">
-  <!-- Section line / FIX POSITIONING!!! -->
-  <Image src={sectionLine} alt={"section line"} class="absolute md:bottom-10 w-full"/>
-    <!-- Column layout -->
-    <div class="grid grid-cols-6 lg:grid-cols-12 px-5">
-      <!-- Helper column / delete later -->
-      <div class="col-start-1 bg-gray-100"></div>
-      <!-- Content column -->
-      <div class="col-start-2 col-span-6 lg:col-start-2 lg:col-span-9">
+<section id="secondSection" class="relative h-screen">
+  
+  <!-- Section line -->
+  <SectionLine/>
+
+  <!-- Column layout -->
+  <div class="relative grid grid-cols-6 lg:grid-cols-12 px-5">
+    <!-- Content columnt -->
+      <div class="col-start-1 col-span-6 lg:col-start-2 lg:col-span-9 mt-[3.5rem]">
         <!-- Content wrapper -->
         <div class="relative">
-          <h2 class="gtflexamed tracking-tight text-[12vw] uppercase">Popularita <span class="absolute text-green-800 text-4xl top-6 left-0">glampingu</span>roste</h2>
+          <h2 class="gtflexamed tracking-tight text-[10vw] leading-[9.2rem] uppercase">Popularita <span class="lowercase absolute text-green-800 bachelorette text-[5vw] -left-[4.5rem] bottom-[8rem]">glampingu</span>roste</h2>
         </div>
       </div>
-      <!-- Content column -->
-      <div class="col-start-2 col-span-6 lg:col-start-5 lg:col-span-4">
-        <!-- Content wrapper -->
-        <div>
-          <p>Glamping je populární. Poptávka po něm celosvětově roste. Za noc v glampingu hosté zaplatí od 2 do 7 tisíc korun.</p>
-          <p>Nejpopulárnější je mezi mladými, kteří pobyty navzájem sdílejí na sítích. Pokud děláte glamping dobře až 80% nocí je ročně zarezervováno.</p>
-        </div>
-      </div>
-      <!-- Content column -->
-      <div class="col-start-9 col-span-4">
-      <!-- Content wrapper -->
-        <div class="flex items-start">
-          <!--!!! !!! !!! <p class="text-6xl">"</p> QUOTE SYMBOL MISSING !!! !!! !!!-->
-          <div class="flex flex-col">
-            <p class="uppercase">v roce <span class="text-green-900">2030</span> má být glampingový trh <span class="text-green-900">dvojnásobný</span></p>
-            <span class="text-sm">Zdroj: GrandView Reserach</span> 
-          </div>
-        </div>
+  </div>
+  </div>
 
-      </div>
-    </div>
-  </div>
-<!-- Image section bottom -->
-  <div class="relative flex w-full h-80 bg-cover bg-center lg:bg-center" style=`background-image: url(${sectionBackground.src})`>
-    <span class="text-orange-900 uppercase absolute rotate-[90deg]">Investujte do vlastního glampingu</span>
-  </div>
 </section>
 
 
 
 
+
+<!-- 
+<div class="relative flex w-full h-80 bg-cover bg-center lg:bg-center" style=`background-image: url(${sectionBackground.src})`>
+  <span class="text-orange-900 uppercase absolute rotate-[90deg]">Investujte do vlastního glampingu</span>
+</div> -->
 
 
 

@@ -15,34 +15,20 @@
 </div>
 
 <!-- Mobile menu -->
-<div class="flex items-center lg:hidden">
+<div class="flex items-center md:hidden">
     <span id="toggle-menu" class="z-[99999] uppercase">Menu</span>
     <label class="relative z-[99999] cursor-pointer pl-2 py-6" for="mobile-menu">
         <input class="peer hidden" type="checkbox" id="mobile-menu" />
         <div class="relative z-[99999] block h-[2px] w-7 bg-black before:absolute before:-top-2 before:block before:h-[2px] before:w-full before:bg-black before:transition-all before:duration-500 before:ease-out before:content-[''] after:absolute after:top-2 after:block after:h-[2px] after:w-full after:bg-black after:transition-all after:duration-500 after:ease-out after:content-[''] peer-checked:bg-transparent before:peer-checked:top-0 before:peer-checked:rotate-45 before:peer-checked:transform after:peer-checked:top-0 after:peer-checked:-rotate-45 after:peer-checked:transform"></div>
     </label>
+    <!-- Fullscreen menu wrapper -->
+    <div id="fullscreen-menu-wrapper" class="fixed inset-0 z-50 bg-green-400 flex items-center justify-center overflow-y-auto opacity-0">
+        <div class="bg-white rounded shadow p-8 w-full max-w-md mx-auto space-y-6">
+        <!-- Add your navigation links or other content here -->
+        </div>
+        </div>
 </div>
-<!-- Fullscreen menu wrapper -->
-<div id="fullscreen-menu-wrapper" class="z-[9999] place-content-center bg-dark-green-100 fixed w-screen transition duration-1000 opacity-0">
 
-    <div class="grid grid-cols-6 px-5">
-       <!-- Content column -->
-       <div class="col-start-1 col-span-6 place-items-center text-center">
-           <!-- Navbar wrapper -->
-           <ul class="list-none w-full flex flex-col justify-center items-center gap-6 text-lg uppercase text-white">
-                <li><a href="#">Můj glamping™</a></li>
-                <li><a href="#">Glampiny-house™</a></li>
-                <li><a href="#">O nás</a></li>
-                <li><a href="#">Kontakt</a></li>
-                <li><a href="mailto:hello@glamping.cz">hello@glamping.cz</a></li>
-                <li><a href="tel:+420585451251">tel:+420585451251</a></li>
-            </ul>
-
-       </div>
-   </div>
-
-
-</div>
 
 <script>
     import { isOpen } from '../navbar.js';
@@ -71,3 +57,6 @@
         openNavbar();
     });
 </script>
+
+
+

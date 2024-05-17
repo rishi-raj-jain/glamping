@@ -1,41 +1,17 @@
-@font-face {
-    font-family: 'GtFlexaMed';
-    src: url('/fonts/GT-Flexa-Extended-Medium.woff2') format('woff2');
-    font-weight: medium;
-    font-style: normal;
-    font-display: swap;
-  }
-
-  @font-face {
-    font-family: 'Bachelorette';
-    src: url('/fonts/Bachelorette_PERSONAL_USE_ONLY.woff2') format('woff2');
-    font-weight: medium;
-    font-style: normal;
-    font-display: swap;
-  }
-
-  @font-face {
-    font-family: 'HelNeuReg';
-    src: url('/fonts/HelveticaNeue-01.ttf') format('truetype');
-    font-weight: medium;
-    font-style: normal;
-    font-display: swap;
-  }
-
-  h1 {
-    font-family: "GtFlexaMed";
+h1 {
+    font-family: var(--font-gt);
   }
 
   .helvetica {
-    font-family: "HelNeuReg";
+    font-family: var(--font-he);
   }
 
   .gtflexamed {
-    font-family: "GtFlexaMed";
+    font-family: var(--font-gt);
   }
 
   .bachelorette {
-    font-family: "Bachelorette";
+    font-family: var(--font-ba);
   }
 
   .text-with-stroke {

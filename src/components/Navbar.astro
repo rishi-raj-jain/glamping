@@ -16,7 +16,7 @@
 
 <!-- Mobile menu -->
 <div class="flex items-center md:hidden">
-    <span id="toggle-menu" class="uppercase">Menu</span>
+    <span id="toggle-menu" class="z-50 uppercase">Menu</span>
     <label class="relative z-40 cursor-pointer px-3 py-6" for="mobile-menu">
         <input class="peer hidden" type="checkbox" id="mobile-menu" />
         <div class="relative z-50 block h-[2px] w-7 bg-black before:absolute before:-top-2 before:block before:h-[2px] before:w-full before:bg-black before:transition-all before:duration-500 before:ease-out before:content-[''] after:absolute after:top-2 after:block after:h-[2px] after:w-full after:bg-black after:transition-all after:duration-500 after:ease-out after:content-[''] peer-checked:bg-transparent before:peer-checked:top-0 before:peer-checked:rotate-45 before:peer-checked:transform after:peer-checked:top-0 after:peer-checked:-rotate-45 after:peer-checked:transform"></div>
@@ -27,14 +27,24 @@
 <div id="fullscreen-menu">
 
     <div id="fullscreen-menu-wrapper" class="bg-green-200 absolute top-0 right-0 w-screen h-screen transition duration-1000 opacity-0">
-        <ul class="list-none flex flex-col items-center gap-6 text-lg uppercase text-black">
-            <li><a href="#">Můj glamping™</a></li>
-            <li><a href="#">Glampiny-house™</a></li>
-            <li><a href="#">O nás</a></li>
-            <li><a href="#">Kontakt</a></li>
-            <li><a href="mailto:hello@glamping.cz">hello@glamping.cz</a></li>
-            <li><a href="tel:+420585451251">tel:+420585451251</a></li>
-        </ul>
+
+        <div class="grid grid-cols-6 px-5">
+           <!-- Content column -->
+           <div class="col-start-1 col-span-6 flex justify-center h-screen">
+               <!-- Navbar wrapper -->
+               <ul class="list-none flex flex-col justify-center items-center gap-6 text-lg uppercase text-black">
+                    <li><a href="#">Můj glamping™</a></li>
+                    <li><a href="#">Glampiny-house™</a></li>
+                    <li><a href="#">O nás</a></li>
+                    <li><a href="#">Kontakt</a></li>
+                    <li><a href="mailto:hello@glamping.cz">hello@glamping.cz</a></li>
+                    <li><a href="tel:+420585451251">tel:+420585451251</a></li>
+                </ul>
+    
+           </div>
+       </div>
+
+
     </div>
 
 </div>
@@ -48,12 +58,21 @@
     }
   
     // Add an event listener to the button
-    document.getElementById('mobile-menu').addEventListener('click',() => {
-        const fullMenu = document.getElementById('fullscreen-menu')
-        const fullMenuWrapper = document.getElementById('fullscreen-menu-wrapper')
+    document.getElementById('mobile-menu').addEventListener('click', () => {
+        const fullMenuWrapper = document.getElementById('fullscreen-menu-wrapper');
+        const menuText = document.getElementById('toggle-menu');
+
+        // Toggle the opacity of the fullscreen menu
         fullMenuWrapper.classList.toggle('opacity-100');
 
-        openNavbar()
+        // Toggle the text of the menu button
+        if (fullMenuWrapper.classList.contains('opacity-100')) {
+            menuText.innerHTML = "Zavřít"; // Change text to "Zavřít" when menu is open
+        } else {
+            menuText.innerHTML = "Menu"; // Change text back to "Menu" when menu is closed
+        }
 
+        // Toggle the state of the navbar
+        openNavbar();
     });
 </script>

@@ -2,21 +2,24 @@
 
 ---
 
-<footer class="h-screen bg-green-200">
-
-    <div class="grid grid-cols-12 gap-2">
-
-        <div class="col-span-1 bg-gray-100">abc</div>
-    
-        <!-- Delete this div -->
-        <div class="col-start-2 col-span-10 bg-gray-100">
-            <h2>Footer component</h2>
+    <!-- Fullscreen menu wrapper -->
+    <div id="fullscreen-menu-wrapper" class="fixed inset-0 z-50 bg-green-400 flex items-center justify-center overflow-y-auto opacity-0">
+        <!-- Add your navigation links or other content here -->
+        <div class="grid grid-cols-6 px-5">
+            <!-- Content column -->
+            <div class="col-start-1 col-span-6 text-center">
+                <!-- Navbar wrapper -->
+                <ul class="list-none w-full flex flex-col justify-center  gap-6 text-lg uppercase text-white">
+                     <li><a href="#">Můj glamping™</a></li>
+                     <li><a href="#">Glampiny-house™</a></li>
+                     <li><a href="#">O nás</a></li>
+                     <li><a href="#">Kontakt</a></li>
+                     <li><a href="mailto:hello@glamping.cz">hello@glamping.cz</a></li>
+                     <li><a href="tel:+420585451251">tel:+420585451251</a></li>
+                 </ul>
+        
+            </div>
         </div>
-
-        <div class="col-span-1 bg-gray-100">abc</div>
-
-    </div>
-    
-    
-</footer>
+        
+        </div>
 

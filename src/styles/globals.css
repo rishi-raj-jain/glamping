@@ -16,8 +16,7 @@
 
   @font-face {
     font-family: 'HelNeuReg';
-    src: url('/fonts/Bachelorette_PERSONAL_USE_ONLY.woff2') format('woff2');
-
+    src: url('/fonts/HelveticaNeue-01.ttf') format('truetype');
     font-weight: medium;
     font-style: normal;
     font-display: swap;
@@ -25,6 +24,10 @@
 
   h1 {
     font-family: "GtFlexaMed";
+  }
+
+  .helvetica {
+    font-family: "HelNeuReg";
   }
 
   .gtflexamed {

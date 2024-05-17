@@ -20,7 +20,7 @@ import heroBadge from "./../assets/images/hero--badge.svg"
     <span id="toggle-menu" class="z-[99999] uppercase">Menu</span>
     <label class="relative z-[99999] cursor-pointer pl-2 py-6" for="mobile-menu">
         <input class="peer hidden" type="checkbox" id="mobile-menu" />
-        <div class="relative z-[99999] block h-[2px] w-7 bg-black before:absolute before:-top-2 before:block before:h-[2px] before:w-full before:bg-black before:transition-all before:duration-500 before:ease-out before:content-[''] after:absolute after:top-2 after:block after:h-[2px] after:w-full after:bg-black after:transition-all after:duration-500 after:ease-out after:content-[''] peer-checked:bg-transparent before:peer-checked:top-0 before:peer-checked:rotate-45 before:peer-checked:transform after:peer-checked:top-0 after:peer-checked:-rotate-45 after:peer-checked:transform"></div>
+        <div class="relative z-[99999] block h-[2px] w-7 bg-black before:absolute before:-top-2 before:block before:h-[2px] before:w-full before:bg-black before:transition-all before:duration-500 before:ease-out before:content-[''] after:absolute after:top-2 after:block after:h-[2px] after:w-full after:bg-black after:transition-all after:duration-500 after:ease-out after:content-[''] peer-checked:before:bg-white peer-checked:after:bg-white peer-checked:bg-transparent before:peer-checked:top-0 before:peer-checked:rotate-45 before:peer-checked:transform after:peer-checked:top-0 after:peer-checked:-rotate-45 after:peer-checked:transform"></div>
     </label>
     <!-- Fullscreen menu wrapper -->
     <div id="fullscreen-menu-wrapper" class="fixed inset-0 z-50 bg-dark-green-100 opacity-0">
@@ -44,14 +44,16 @@ import heroBadge from "./../assets/images/hero--badge.svg"
                 </div>
 
                 <div class="absolute bottom-0 right-0 mr-4 mb-4">
-                    <Image src={heroBadge} alt="hero badge" class="max-w-[96px] fill-current"/>
+                    <Image src={heroBadge} alt="hero badge" class="animate-rotate max-w-[96px] fill-current"/>
                 </div>
 
             </div>
         </div>
  </div>
         </div>
+
 </div>
+
 
 
 <script>
@@ -69,6 +71,7 @@ import heroBadge from "./../assets/images/hero--badge.svg"
 
         // Toggle the opacity of the fullscreen menu
         fullMenuWrapper.classList.toggle('opacity-100');
+        menuText.classList.toggle('text-white')
 
         // Toggle the text of the menu button
         if (fullMenuWrapper.classList.contains('opacity-100')) {
@@ -81,6 +84,5 @@ import heroBadge from "./../assets/images/hero--badge.svg"
         openNavbar();
     });
 </script>
-
 
 

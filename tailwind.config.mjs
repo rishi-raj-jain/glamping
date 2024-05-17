@@ -3,6 +3,12 @@ export default {
 	content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
 	theme: {
 	  extend: {
+		fontSize: {
+			clampHeading1: "clamp(36px, 2.5vw, 72px);",
+			clampHeading2: "clamp(24px, 2vw, 36px);",
+			clampParagraph: "clamp(14px, 1.5vw, 16px);"
+
+		  },
 		colors: {
 		  'dark-green': {
 			100: "#1F3832",
